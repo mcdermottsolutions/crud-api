@@ -206,7 +206,7 @@ app.post('/reset', function (req, res) {
           if (req.params.format === 'json') {
             res.status(201).json(createdBooks.concat(createdWines));
           } else {
-            res.status(200);
+            res.end();
           }
         });
       });
