@@ -49,7 +49,6 @@ app.get('/books', function (req, res) {
 app.post('/books', function (req, res) {
   // create new book with form data (`req.body`)
   var newBook = new Book(req.body);
-
   // save new book in db
   newBook.save(function (err, savedBook) {
     if (err) {
@@ -217,5 +216,5 @@ app.post('/reset', function (req, res) {
 
 // listen on port (production or localhost)
 app.listen(process.env.PORT || 3000, function() {
-  console.log('server started');
+  console.log('listening on port 3000');
 });
